@@ -36,8 +36,9 @@ class PDFConverter():
 
     def create_entry(self, product):
         match_one_number = '(.+) - (\d+)\s?([a-z]+)'
+        match_one_number_some = '(.+) troszeczkę (\d+)\s?([a-z]+)'
         match_two_numbers = ('(.+)około\s?(\d+\.?\d?\d?)\s(.+)\s(\d+)\s?([a-z]+)')
-        match_one = re.match(match_one_number, product)
+        match_one = re.match(match_one_number, product) or re.match(match_one_number_some, product)
         match_two = re.match(match_two_numbers, product)
         element = dict()
         if match_one:
