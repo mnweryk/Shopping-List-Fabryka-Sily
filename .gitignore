@@ -1,0 +1,5 @@
+# IDE files
+.idea/
+
+# source files should be added manually each time
+source/*
