@@ -87,4 +87,3 @@ OUTPUT_PATH = 'output'
 pdfConverter = PDFConverter(SOURCE_PATH)
 
 dataExporter = DataExporter(OUTPUT_PATH, pdfConverter.product_list, factor)
-# print(pdfConverter.product_list)
